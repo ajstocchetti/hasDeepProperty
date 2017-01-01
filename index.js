@@ -11,6 +11,4 @@ function hasDeepProperty(obj, propArray) {
     } else return false;
 }
 
-module.exports = {
-    hasDeepProperty,
-};
+module.exports = hasDeepProperty;

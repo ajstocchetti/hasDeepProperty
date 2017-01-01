@@ -1,0 +1,19 @@
+{
+  "name": "has-deep-property",
+  "version": "1.0.0",
+  "description": "performs a deep hasOwnProperty check",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "keywords": [
+    "hasOwnProperty",
+    "property"
+  ],
+  "author": "Andy Stocchetti",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
