@@ -32,6 +32,7 @@ hasDeepProperty takes two parameters:
 and returns `true` or `false` depending on whether the full path of properties exists
 ```
 var hasDeepProperty = require('has-deep-property');
+
 var obj = {
     foo: {
         bar: {
@@ -39,6 +40,7 @@ var obj = {
         }
     }
 }
+
 hasDeepProperty(obj, ['foo']); // true
 hasDeepProperty(obj, ['foo', 'bar', 'baz']); // true
 hasDeepProperty(obj, ['foo', 'buzz']); // false
