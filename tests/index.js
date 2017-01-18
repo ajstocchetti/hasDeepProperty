@@ -50,4 +50,5 @@ describe('function returns false when:', function() {
     falseHelper('deep property does not exist', ['a', 'b', 'c', 'd', 'z']);
     falseHelper('property in the middle does not exist', ['a', 'b', 'c', 'z', 'd']);
     falseHelper('property in the middle does not exist', ['a', 'b', 'z', 'd']);
+    falseHelper('search for the value, not the key', ['a', 'b', 'c', 'd', 'D']);
 });
