@@ -20,7 +20,7 @@ if(hasDeepProperty(obj, ['someProperty', 'anotherProp', 'moreProps', 'youGetTheP
 
 ## Installation
 
-```
+```bash
 $ npm install --save hasDeepProperty
 ```
 
@@ -30,7 +30,7 @@ hasDeepProperty takes two parameters:
 * an array of properties to check
 
 and returns `true` or `false` depending on whether the full path of properties exists
-```
+```javascript
 var hasDeepProperty = require('has-deep-property');
 
 var obj = {
@@ -44,4 +44,5 @@ var obj = {
 hasDeepProperty(obj, ['foo']); // true
 hasDeepProperty(obj, ['foo', 'bar', 'baz']); // true
 hasDeepProperty(obj, ['foo', 'buzz']); // false
+hasDeepProperty(obj, ['foo', 'bar', 'baz', 'exists']); // false - exists is a value, not a property/key name
 ```
