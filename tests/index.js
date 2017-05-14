@@ -51,3 +51,31 @@ describe('function returns false when:', function() {
     falseHelper('property in the middle does not exist', ['a', 'b', 'c', 'z', 'd']);
     falseHelper('property in the middle does not exist', ['a', 'b', 'z', 'd']);
 });
+
+describe('when non-objects are provided', function() {
+    var undef;
+    var someObj = {
+        undef: undef,
+        isNull: null,
+        zero: 0,
+        str: '',
+        func: function() {
+            return { another: {} };
+        },
+    };
+    it('returns false when property is undefined', function() {
+        hasDeepProperty(someObj, ['undef', 'another']).should.equal(false);
+    });
+    it('returns false when property is null', function() {
+        hasDeepProperty(someObj, ['isNull', 'another']).should.equal(false);
+    });
+    it('returns false when property is 0', function() {
+        hasDeepProperty(someObj, ['zero', 'another']).should.equal(false);
+    });
+    it('returns false when property is empty string', function() {
+        hasDeepProperty(someObj, ['str', 'toLocaleLowerCase']).should.equal(false);
+    });
+    it('returns false when property is a function', function() {
+        hasDeepProperty(someObj, ['func', 'another']).should.equal(false);
+    });
+});
